@@ -19,7 +19,7 @@ if "messages" not in st.session_state:
 
 # チャットボットとやりとりする関数
 def communicate():
-
+    messages = st.session_state["messages"]
     # The azureml-model-deployment header will force the request to go to a specific deployment.
     # Remove this header to have the request observe the endpoint traffic rules
     headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key), 'azureml-model-deployment': 'unoyu-chat-list-2' }
