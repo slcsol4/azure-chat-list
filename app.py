@@ -62,9 +62,8 @@ def communicate():
     req = urllib.request.Request(url, body, headers)
 
     response = urllib.request.urlopen(req)
-    result = response.read()
+    bot_message = response.read()
     
-    bot_message = result["output"]
     messages.append(bot_message)
 
     st.session_state["user_input"] = ""  # 入力欄を消去
