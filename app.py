@@ -65,7 +65,7 @@ def communicate():
     bot_message = response.read()
     
     messages.append(bot_message)
-
+    print(messages)
     st.session_state["user_input"] = ""  # 入力欄を消去
 
 
