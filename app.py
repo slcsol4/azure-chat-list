@@ -70,8 +70,8 @@ st.button('Clear All Chat', on_click=clearChat)
 
 if st.session_state["messages"]:
     messages = st.session_state["messages"]
-
-    for message in reversed(messages[1:]):  # 直近のメッセージを上に
+    
+    for message in reversed(messages):  # 直近のメッセージを上に
         # 回答内容を記載
         st.write("🤖" + ": " + message["outputs"]["output"])
         # 質問内容を記載
